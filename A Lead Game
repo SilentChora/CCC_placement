@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n,lead=0,win,s1=0,s2=0,i,c1=0,c2=0;
+    cin >> n;
+    for(i=0;n>i;i++)
+    {
+        cin >> s1 >> s2;
+        c1+=s1;
+        c2+=s2;
+        
+        if(c1>c2)
+        {
+            if((c1-c2)>lead)
+            {
+                lead=c1-c2;
+                win=1;
+            }
+        }
+        else if(c2>c1)
+        {
+            if((c2-c1)>lead)
+            {
+                lead=c2-c1;
+                win=2;
+            }
+        }
+    }
+    cout << win << " " << lead;
+return 0;
+}
