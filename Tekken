@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int m,i,a,b,c,x;
+	cin >> m;
+	for(i=0;m>i;i++)
+	{
+	    cin >> a >> b >> c;
+	    x=min(b,c);
+	    b-=x;
+	    c-=x;
+	    if((a>b) && (a>c))
+	    {
+	        cout << "YES" << endl;
+	    }
+	    else{
+	        cout << "NO" << endl;
+	    }
+	    
+	}
+	return 0;
+}
